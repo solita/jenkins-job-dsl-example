@@ -13,7 +13,6 @@ Job.build(this,
     mvn: 'properties:read-project-properties dbmaintain:clearDatabase dbmaintain:updateDatabase clean package -Pdb-ci',
     scmTrigger: '@midnight',
     downstream: deploy,
-    coverage: false,
     scm: Scm.git('master'),
     hipchat: HipChat.disabled(['START', 'SUCCESS'])
 ])

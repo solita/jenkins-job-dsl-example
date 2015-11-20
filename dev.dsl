@@ -1,5 +1,6 @@
 import utils.HipChat
 import utils.Scm
+import utils.Jacoco
 import utils.Job
 
 def build = Job.name('MyProject', 'Dev', 'Build')
@@ -14,8 +15,8 @@ Job.build(this,
     gulp: 'gulp build --profile="dev"',
     mvn: 'properties:read-project-properties dbmaintain:clearDatabase dbmaintain:updateDatabase clean package -Pdev-ad,db-ci -DexcludedGroups="fi.myproject.IntegrationTests"',
     scmTrigger: 'H/5 * * * *',
-    downstream: uiUnitTests,
-    coverage: true,
+    downstreatTests,
+    jacoco: Jacoco.defaults(),
     scm: Scm.git('master'),
     hipchat: HipChat.disabled(['START', 'SUCCESS'])
 ])
