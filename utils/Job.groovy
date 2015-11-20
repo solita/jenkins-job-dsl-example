@@ -125,7 +125,7 @@ class Job {
             steps {
               shell("Deploy artifacts here and stop server")
               if (profile.clearDatabase)
-                  shell("dbmaintain clear database""))
+                  shell("dbmaintain clear database"))
               if (profile.importDatabase)
                   shell("Import some test data")
               shell("Database migration and update application")

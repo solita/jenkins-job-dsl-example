@@ -7,7 +7,7 @@ class Scm {
         return {
             git {
                 remote {
-                    url('git@github.com:solita/jenkins-job-dsl-example.git)
+                    url('git@github.com:solita/jenkins-job-dsl-example.git')
                 }
                 branch(branchName)
                 localBranch(branchName)
