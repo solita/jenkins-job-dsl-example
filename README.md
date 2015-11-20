@@ -1,2 +1,2 @@
 # jenkins-job-dsl-example
-How to set up jobs using Jenkins Job DSL
+Less trivial example how to set up jobs using Jenkins Job DSL with re-usable configuration
