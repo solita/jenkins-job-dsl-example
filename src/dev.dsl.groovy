@@ -15,7 +15,7 @@ Job.build(this,
     gulp: 'gulp build --profile="dev"',
     mvn: 'properties:read-project-properties dbmaintain:clearDatabase dbmaintain:updateDatabase clean package -Pdev-ad,db-ci -DexcludedGroups="fi.myproject.IntegrationTests"',
     scmTrigger: 'H/5 * * * *',
-    downstreatTests,
+    downstream: uiUnitTests,
     jacoco: Jacoco.defaults(),
     scm: Scm.git('master'),
     hipchat: HipChat.disabled(['START', 'SUCCESS'])
